@@ -99,3 +99,13 @@ header {
 }
 
 /* #endregion cards */
+
+/* Style the placeholder text */
+.form-control::placeholder {
+    color: #9CA3AF;
+}
+
+/* Optional: Style the placeholder on focus */
+.form-control:focus::placeholder {
+    color: #6C757D;
+}
