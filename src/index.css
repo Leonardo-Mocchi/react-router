@@ -1,2 +1,99 @@
- @import "bootstrap";
- @import "bootstrap-icons";
+@import "bootstrap";
+@import "bootstrap-icons";
+
+/* #region header */
+header {
+    background-color: #255F38;
+    z-index: 0;
+    position: relative;
+    height: 130px;
+
+    .d-flex {
+        height: 130px;
+    }
+}
+
+/* #region svgs adaptations */
+#header_complexity_1 {
+    position: absolute;
+    right: 12%;
+    top: 0;
+    background-image: url(/assets/img/header-bg-1.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 50%;
+    z-index: 1;
+}
+
+#header_complexity_2 {
+    background-image: url(/assets/img/header-bg-2.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 130px;
+    width: 29%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+/* #endregion svgs adaptations */
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.nav-link.active {
+    background-color: #1F7D53;
+    color: white;
+    font-weight: bold;
+}
+
+/* #endregion header */
+
+/* #region cards */
+.card-container {
+    margin: 0 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-title {
+    font-weight: 800;
+
+}
+
+/* optional, applies text */
+/* .card-text {
+    max-height: 6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+} */
+
+.card-tags .badge {
+    padding: 0.3rem 0.5rem;
+}
+
+.badge {
+    font-size: 0.9rem;
+    background-color: #1F7D53;
+    padding: 0.3rem 0.5rem;
+}
+
+.text_highlight {
+    color: #1F7D53;
+}
+
+/* #endregion cards */
