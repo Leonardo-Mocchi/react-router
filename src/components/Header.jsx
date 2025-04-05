@@ -12,7 +12,7 @@ export default function Header() {
     {
       id: 2,
       path: '/posts',
-      text: 'Posts'
+      text: 'Recipes'
     },
     {
       id: 3,
