@@ -60,7 +60,6 @@ export default function HomePage() {
                             <img src={post.image} className="card-img-top" alt={post.title} />
                             <div className="card-body">
                                 <h5 className="card-title">{post.title}</h5>
-                                <p className="card-text">{post.content.substring(0, 90)} ...</p>
                             </div>
                         </div>
                     ))}

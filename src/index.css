@@ -100,12 +100,61 @@ header {
 
 /* #endregion cards */
 
-/* Style the placeholder text */
+
 .form-control::placeholder {
     color: #9CA3AF;
 }
 
-/* Optional: Style the placeholder on focus */
 .form-control:focus::placeholder {
     color: #6C757D;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #255F38;
+    border-color: #145A32;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: #145A32;
+    border-color: #255F38;
+}
+
+/* Custom Button Styling */
+.btn-custom {
+    background-color: #1F7D53;
+    /* Green background */
+    color: white;
+    /* White text */
+    border: 2px solid #145A32;
+    /* Dark green border */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 10px 20px;
+    /* Padding for better spacing */
+    font-weight: bold;
+    /* Bold text */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    /* Smooth transitions */
+}
+
+.btn-custom {
+    background-color: #1F7D53;
+    color: white;
+    border: 2px solid #145A32;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-custom:hover {
+    background-color: #145A32;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-custom:active {
+    background-color: #0F4D2E;
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

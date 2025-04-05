@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 const api_endpoint = "http://localhost:3000/posts"
 
 export default function Posts() {
@@ -45,7 +46,7 @@ export default function Posts() {
                     <div
                         key={post.slug}
                         className="card mb-5 text-light border-2"
-                        style={{ maxWidth: "100%", backgroundColor: "#27391C", borderColor: "#255F38" }}
+                        style={{ maxWidth: "100%", backgroundColor: "#27391C", borderColor: "#255F38", maxHeight: "297px" }}
                     >
                         <div className={`row g-0 ${index % 2 === 0 ? "" : "flex-row-reverse"}`}>
                             <div className="col-3">
@@ -55,16 +56,27 @@ export default function Posts() {
                                 <div className="card-body">
                                     <div className={`d-flex justify-content-between align-items-center ${index % 2 === 0 ? "" : "flex-row-reverse"}`}>
                                         <h4 className={`card-title text-white ${index % 2 === 0 ? "" : "text-end me-3"}`}>{post.title}</h4>
-                                    </div>
-                                    <p className={`card-text fs-5 ${index % 2 === 0 ? "" : "text-end"}`}>{post.content}</p>
-                                    <div className={`card-tags ${index % 2 === 0 ? "" : "text-end"}`}>
 
-                                        {/* .map() te gather all the tags from the tag key  */}
-                                        {post.tags.map((tag, index) => (
-                                            <span key={index} className="badge me-1">
-                                                {tag}
-                                            </span>
-                                        ))}
+                                    </div>
+                                    <p style={{ minHeight: "175px" }} className={`card-text fs-5 ${index % 2 === 0 ? "" : "text-end"}`}>{post.content}</p>
+
+                                    <div className={`d-flex justify-content-between align-items-center ${index % 2 === 0 ? "" : "flex-row-reverse"}`}>
+
+                                        {/* link to the details of the post */}
+                                        <Link to={`/posts/${post.slug}`} className="btn btn-success"> See the full recipe </Link>
+
+
+                                        {/* tags */}
+                                        <div className={`card-tags ${index % 2 === 0 ? "" : "text-end"}`}>
+
+                                            {/* .map() te gather all the tags from the tag key  */}
+                                            {post.tags.map((tag, index) => (
+                                                <span key={index} className="badge me-1">
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+
                                     </div>
 
                                 </div>

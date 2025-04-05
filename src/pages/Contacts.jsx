@@ -3,10 +3,9 @@ import { useState } from "react";
 export default function Contacts() {
     const [submitted, setSubmitted] = useState(false);
 
-    // Handle form submission
     function handleSubmit(event) {
-        event.preventDefault(); // Prevent actual form submission
-        setSubmitted(true); // Show success message
+        event.preventDefault();
+        setSubmitted(true);
     }
 
     return (
