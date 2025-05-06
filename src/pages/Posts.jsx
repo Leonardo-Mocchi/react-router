@@ -28,7 +28,7 @@ export default function Posts() {
 
             {/* cards presantation title */}
             <h2 className="my-5 d-flex justify-content-center align-items-center">
-                As
+                A
                 <div className="d-flex flex-column justify-content-center align-items-center">
                     <i className="bi bi-arrow-down text_highlight"></i>
                     <span className="fs-6 mx-2">short</span>
